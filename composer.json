@@ -1,0 +1,43 @@
+{
+  "name": "netolabs/simple-logger",
+  "description": "Basic and fast implementation of the PSR-3 logger interface",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Ben Plunkett",
+      "email": "ben.plunkett@neto.com.au"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Neto\\Logger\\": "src/Neto/Logger"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Neto\\Test\\Logger\\": "tests/Logger"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.3",
+    "ext-json": "*",
+    "psr/log": "^1.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "7.5.*",
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "provide": {
+    "psr/log-implementation": "1.0.0"
+  },
+  "scripts": {
+    "test": [
+      "phpunit --testdox"
+    ],
+    "lint": [
+      "phpcs --standard=PSR2 src"
+    ]
+  }
+}
